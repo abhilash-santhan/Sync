@@ -1,0 +1,32 @@
+{
+  "name": "sync-platform",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "PORT=1234 parcel index.html --port 1234",
+    "build": "parcel build index.html",
+    "server": "nodemon server/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@supabase/ssr": "^0.12.7",
+    "@supabase/supabase-js": "^2.118.0",
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.8",
+    "express": "^5.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.11.3",
+    "multer": "^2.5.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "buffer": "^6.0.3",
+    "nodemon": "^3.1.14",
+    "parcel": "^2.16.4"
+  }
+}

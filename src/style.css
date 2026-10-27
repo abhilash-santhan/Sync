@@ -1,0 +1,1124 @@
+
+/* SYNC professional login page */
+
+.sync-login-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0 7%;
+    background: #F7F8FA;
+    color: #1B4965;
+  }
+  
+  .sync-login-header {
+    min-height: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border-bottom: 1px solid #E5E7EB;
+  }
+  
+  .sync-login-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+    color: #1B4965;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 2px;
+  }
+  
+  .sync-brand-mark {
+    display: grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 11px;
+    background: #1B4965;
+    color: #FFFFFF;
+    font-size: 22px;
+    letter-spacing: 0;
+  }
+  
+  .sync-header-prompt {
+    color: #6B7280;
+    font-size: 14px;
+  }
+  
+  .sync-header-prompt a {
+    margin-left: 5px;
+    color: #1B4965;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  
+  .sync-header-prompt a:hover {
+    text-decoration: underline;
+  }
+  
+  .sync-login-layout {
+    flex: 1;
+    width: 100%;
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 58px 0 64px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(390px, 460px);
+    align-items: center;
+    gap: clamp(42px, 7vw, 100px);
+  }
+  
+  .sync-login-intro {
+    max-width: 510px;
+  }
+  
+  .sync-eyebrow,
+  .sync-login-step {
+    display: inline-block;
+    color: #1B4965;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.6px;
+    line-height: 1.6;
+  }
+  
+  .sync-slogan {
+    margin: 22px 0 20px;
+    color: #1B4965;
+    font-size: clamp(42px, 5vw, 64px);
+    line-height: 1.12;
+    letter-spacing: -2.4px;
+    font-weight: 800;
+  }
+  
+  .sync-slogan-line {
+    display: block;
+    width: fit-content;
+    max-width: 100%;
+    position: relative;
+    transition:
+      transform 240ms ease,
+      color 240ms ease;
+  }
+  
+  .sync-slogan-highlight {
+    color: #6B7280;
+  }
+  
+  .sync-slogan-line::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 3px;
+    border-radius: 3px;
+    background: #1B4965;
+    transition: width 320ms ease;
+  }
+  
+  .sync-slogan:hover .sync-slogan-line {
+    transform: translateY(-3px);
+  }
+  
+  .sync-slogan:hover .sync-slogan-highlight {
+    color: #1B4965;
+  }
+  
+  .sync-slogan:hover .sync-slogan-line::after {
+    width: 100%;
+  }
+  
+  .sync-login-description {
+    max-width: 430px;
+    margin: 0;
+    color: #6B7280;
+    font-size: 16px;
+    line-height: 1.85;
+  }
+  
+  .sync-login-benefits {
+    display: grid;
+    gap: 25px;
+    margin-top: 38px;
+  }
+  
+  .sync-benefit {
+    display: flex;
+    align-items: flex-start;
+    gap: 17px;
+  }
+  
+  .sync-benefit-number {
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    border: 1px solid #D5DEE5;
+    border-radius: 10px;
+    color: #1B4965;
+    font-size: 12px;
+    font-weight: 800;
+    transition:
+      background 200ms ease,
+      color 200ms ease,
+      transform 200ms ease;
+  }
+  
+  .sync-benefit:hover .sync-benefit-number {
+    background: #1B4965;
+    color: #FFFFFF;
+    transform: translateY(-2px);
+  }
+  
+  .sync-benefit strong {
+    display: block;
+    margin: 1px 0 5px;
+    color: #1B4965;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  
+  .sync-benefit p {
+    margin: 0;
+    color: #6B7280;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  
+  .sync-login-card {
+    width: 100%;
+    padding: 36px;
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 18px;
+    box-shadow: 0 18px 55px rgba(27, 73, 101, 0.07);
+  }
+  
+  .sync-login-card-heading {
+    margin-bottom: 30px;
+  }
+  
+  .sync-login-card-heading h2 {
+    margin: 10px 0 8px;
+    color: #1B4965;
+    font-size: 29px;
+    line-height: 1.25;
+    letter-spacing: -0.8px;
+  }
+  
+  .sync-login-card-heading p {
+    margin: 0;
+    color: #6B7280;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  
+  .sync-login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+  
+  .sync-login-field {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+  
+  .sync-login-field > label,
+  .sync-password-label-row > label {
+    color: #263746;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  
+  .sync-login-field > input,
+  .sync-password-wrap > input {
+    width: 100%;
+    min-width: 0;
+    height: 48px;
+    padding: 0 14px;
+    border: 1px solid #DCE2E8;
+    border-radius: 8px;
+    background: #FFFFFF;
+    color: #1B4965;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition:
+      border-color 160ms ease,
+      box-shadow 160ms ease;
+  }
+  
+  .sync-login-field input::placeholder {
+    color: #9CA3AF;
+  }
+  
+  .sync-login-field > input:focus,
+  .sync-password-wrap > input:focus {
+    border-color: #1B4965;
+    box-shadow: 0 0 0 3px rgba(27, 73, 101, 0.09);
+  }
+  
+  .sync-password-label-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  
+  .sync-password-label-row a {
+    color: #1B4965;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  
+  .sync-password-label-row a:hover {
+    text-decoration: underline;
+  }
+  
+  .sync-password-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .sync-password-wrap > input {
+    padding-right: 65px;
+  }
+  
+  .sync-login-card .sync-password-toggle {
+    position: absolute;
+    right: 10px;
+    margin: 0;
+    padding: 7px;
+    border: 0;
+    background: transparent;
+    color: #1B4965;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  
+  .sync-login-card .sync-password-toggle:hover {
+    background: transparent;
+    opacity: 0.7;
+  }
+  
+  .sync-login-message {
+    margin: -5px 0 0;
+    padding: 12px;
+    border: 1px solid #D5DEE5;
+    border-radius: 8px;
+    background: #F1F6F9;
+    color: #1B4965;
+    font-size: 12px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+  }
+  
+  .sync-login-card .sync-login-submit {
+    width: 100%;
+    min-height: 49px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0;
+    padding: 13px 16px;
+    border: 1px solid #1B4965;
+    border-radius: 9px;
+    background: #1B4965;
+    color: #FFFFFF;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition:
+      background 180ms ease,
+      transform 180ms ease,
+      box-shadow 180ms ease;
+  }
+  
+  .sync-login-card .sync-login-submit:hover {
+    background: #143A51;
+    box-shadow: 0 7px 18px rgba(27, 73, 101, 0.15);
+    transform: translateY(-1px);
+  }
+  
+  .sync-login-card .sync-login-submit:active {
+    transform: translateY(0);
+  }
+  
+  .sync-login-terms {
+    margin: -5px 0 0;
+    color: #6B7280;
+    font-size: 11px;
+    line-height: 1.7;
+    text-align: center;
+  }
+  
+  .sync-login-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 25px 0 18px;
+    color: #9CA3AF;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  
+  .sync-login-divider::before,
+  .sync-login-divider::after {
+    content: "";
+    height: 1px;
+    flex: 1;
+    background: #E5E7EB;
+  }
+  
+  .sync-create-account {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 44px;
+    padding: 10px;
+    border: 1px solid #DCE2E8;
+    border-radius: 9px;
+    color: #1B4965;
+    background: #FFFFFF;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    transition:
+      background 180ms ease,
+      border-color 180ms ease;
+  }
+  
+  .sync-create-account:hover {
+    background: #F1F6F9;
+    border-color: #1B4965;
+  }
+  
+  .sync-login-footer {
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border-top: 1px solid #E5E7EB;
+    color: #6B7280;
+    font-size: 11px;
+  }
+  
+  @media (max-width: 900px) {
+    .sync-login-page {
+      padding: 0 5%;
+    }
+  
+    .sync-login-layout {
+      grid-template-columns: 1fr;
+      max-width: 520px;
+      gap: 35px;
+      padding: 42px 0;
+    }
+  
+    .sync-login-intro {
+      max-width: 100%;
+    }
+  
+    .sync-slogan {
+      font-size: clamp(42px, 7vw, 56px);
+    }
+  
+    .sync-login-benefits {
+      gap: 18px;
+      margin-top: 25px;
+    }
+  }
+  
+  @media (max-width: 520px) {
+    .sync-login-page {
+      padding: 0 18px;
+    }
+  
+    .sync-login-header {
+      min-height: 72px;
+    }
+  
+    .sync-login-brand {
+      gap: 8px;
+      font-size: 21px;
+    }
+  
+    .sync-brand-mark {
+      width: 33px;
+      height: 33px;
+      font-size: 19px;
+    }
+  
+    .sync-header-prompt {
+      font-size: 11px;
+    }
+  
+    .sync-login-layout {
+      gap: 26px;
+      padding: 32px 0 38px;
+    }
+  
+    .sync-slogan {
+      margin: 17px 0;
+      font-size: 43px;
+      letter-spacing: -1.8px;
+    }
+  
+    .sync-login-description {
+      font-size: 14px;
+      line-height: 1.75;
+    }
+  
+    .sync-login-benefits {
+      display: none;
+    }
+  
+    .sync-login-card {
+      padding: 25px 20px;
+      border-radius: 14px;
+    }
+  
+    .sync-login-card-heading {
+      margin-bottom: 25px;
+    }
+  
+    .sync-login-card-heading h2 {
+      font-size: 25px;
+    }
+  
+    .sync-login-form {
+      gap: 19px;
+    }
+  
+    .sync-login-footer {
+      min-height: 55px;
+      font-size: 10px;
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .sync-login-page *,
+    .sync-login-page *::before,
+    .sync-login-page *::after {
+      transition: none !important;
+    }
+  }
+  
+/* SYNC signup page */
+
+
+/* Simple SYNC signup page */
+
+.simple-signup-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0 7%;
+    background: #F7F8FA;
+    color: #1B4965;
+  }
+  
+  .simple-signup-header {
+    min-height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    border-bottom: 1px solid #E5E7EB;
+  }
+  
+  .simple-signup-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #1B4965;
+    font-size: 23px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-decoration: none;
+  }
+  
+  .simple-signup-mark {
+    display: grid;
+    place-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 9px;
+    background: #1B4965;
+    color: #FFFFFF;
+    font-size: 20px;
+  }
+  
+  .simple-signup-header p {
+    color: #6B7280;
+    font-size: 13px;
+  }
+  
+  .simple-signup-header p a {
+    margin-left: 4px;
+    color: #1B4965;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  
+  .simple-signup-header p a:hover {
+    text-decoration: underline;
+  }
+  
+  .simple-signup-card {
+    width: 100%;
+    max-width: 450px;
+    margin: 45px auto;
+    padding: 34px;
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 15px;
+    box-shadow: 0 12px 40px rgba(27, 73, 101, 0.06);
+  }
+  
+  .simple-signup-heading {
+    margin-bottom: 26px;
+  }
+  
+  .simple-signup-heading > span {
+    color: #1B4965;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+  }
+  
+  .simple-signup-heading h1 {
+    margin: 10px 0 8px;
+    color: #1B4965;
+    font-size: 27px;
+    letter-spacing: -0.7px;
+  }
+  
+  .simple-signup-heading p {
+    margin: 0;
+    color: #6B7280;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  
+  .simple-signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  
+  .simple-account-fieldset {
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+  
+  .simple-account-fieldset legend {
+    margin-bottom: 10px;
+    color: #263746;
+    font-size: 12px;
+    font-weight: 700;
+  }
+  
+  .simple-account-types {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  
+  .simple-account-types button {
+    min-height: 44px;
+    margin: 0;
+    padding: 10px;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    background: #FFFFFF;
+    color: #1B4965;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 160ms ease, border-color 160ms ease;
+  }
+  
+  .simple-account-types button:hover {
+    border-color: #1B4965;
+  }
+  
+  .simple-account-types button.active {
+    border-color: #1B4965;
+    background: #F1F6F9;
+    box-shadow: inset 0 0 0 1px #1B4965;
+  }
+  
+  .simple-signup-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .simple-signup-field > label {
+    color: #263746;
+    font-size: 12px;
+    font-weight: 700;
+  }
+  
+  .simple-signup-field > input,
+  .simple-signup-password > input {
+    width: 100%;
+    min-width: 0;
+    height: 45px;
+    padding: 0 12px;
+    border: 1px solid #DCE2E8;
+    border-radius: 8px;
+    background: #FFFFFF;
+    color: #1B4965;
+    font-family: inherit;
+    font-size: 13px;
+    outline: none;
+    transition: border-color 160ms ease, box-shadow 160ms ease;
+  }
+  
+  .simple-signup-field input::placeholder {
+    color: #9CA3AF;
+  }
+  
+  .simple-signup-field > input:focus,
+  .simple-signup-password > input:focus {
+    border-color: #1B4965;
+    box-shadow: 0 0 0 3px rgba(27, 73, 101, 0.09);
+  }
+  
+  .simple-signup-password {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .simple-signup-password > input {
+    padding-right: 60px;
+  }
+  
+  .simple-signup-password button {
+    position: absolute;
+    right: 9px;
+    margin: 0;
+    padding: 6px;
+    border: 0;
+    background: transparent;
+    color: #1B4965;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  
+  .simple-signup-password button:hover {
+    background: transparent;
+    opacity: 0.7;
+  }
+  
+  .simple-signup-message {
+    margin: 0;
+    padding: 11px;
+    border: 1px solid #D5DEE5;
+    border-radius: 8px;
+    background: #F1F6F9;
+    color: #1B4965;
+    font-size: 12px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+  }
+  
+  .simple-signup-form .simple-signup-submit {
+    min-height: 47px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    margin: 0;
+    padding: 12px 16px;
+    border: 1px solid #1B4965;
+    border-radius: 8px;
+    background: #1B4965;
+    color: #FFFFFF;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 160ms ease, transform 160ms ease;
+  }
+  
+  .simple-signup-form .simple-signup-submit:hover {
+    background: #143A51;
+    transform: translateY(-1px);
+  }
+  
+  .simple-signup-terms {
+    margin: 20px 0 0;
+    color: #6B7280;
+    font-size: 10px;
+    line-height: 1.7;
+    text-align: center;
+  }
+  
+  .simple-signup-footer {
+    min-height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #E5E7EB;
+    color: #6B7280;
+    font-size: 11px;
+  }
+  
+  @media (max-width: 520px) {
+    .simple-signup-page {
+      padding: 0 18px;
+    }
+  
+    .simple-signup-header {
+      min-height: 68px;
+    }
+  
+    .simple-signup-brand {
+      font-size: 20px;
+    }
+  
+    .simple-signup-header p {
+      font-size: 11px;
+    }
+  
+    .simple-signup-card {
+      margin: 28px auto;
+      padding: 25px 20px;
+    }
+  
+    .simple-signup-heading h1 {
+      font-size: 24px;
+    }
+  }
+
+/* =========================================
+   SYNC — Premium Login Polish
+   Append to the bottom of your CSS file
+========================================= */
+
+.sync-login-page {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background:
+      radial-gradient(ellipse at 12% 38%, rgba(214, 232, 242, 0.55), transparent 36%),
+      linear-gradient(135deg, #fbfcfe 0%, #f4f8fb 52%, #ffffff 100%);
+  }
+  
+  .sync-login-page::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 380px;
+    height: 380px;
+    top: 130px;
+    left: -230px;
+    border: 1px solid rgba(27, 73, 101, 0.09);
+    border-radius: 50%;
+    box-shadow:
+      0 0 0 35px rgba(27, 73, 101, 0.025),
+      0 0 0 75px rgba(27, 73, 101, 0.02);
+    pointer-events: none;
+  }
+  
+  .sync-login-header {
+    border-bottom-color: rgba(27, 73, 101, 0.10);
+  }
+  
+  .sync-login-brand {
+    transition: opacity 180ms ease, transform 180ms ease;
+  }
+  
+  .sync-login-brand:hover {
+    opacity: 0.85;
+    transform: translateY(-1px);
+  }
+  
+  .sync-brand-mark {
+    border-radius: 12px;
+    background: linear-gradient(145deg, #245d7c, #12364d);
+    box-shadow: 0 5px 13px rgba(27, 73, 101, 0.20);
+  }
+  
+  .sync-header-prompt a,
+  .sync-password-label-row a {
+    transition: color 180ms ease;
+  }
+  
+  .sync-header-prompt a:hover,
+  .sync-password-label-row a:hover {
+    color: #347da3;
+    text-decoration: none;
+  }
+  
+  .sync-login-layout {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .sync-eyebrow,
+  .sync-login-step {
+    color: #39718e;
+    letter-spacing: 2px;
+  }
+  
+  .sync-eyebrow {
+    padding: 8px 12px;
+    border: 1px solid rgba(27, 73, 101, 0.12);
+    border-radius: 100px;
+    background: rgba(255, 255, 255, 0.72);
+  }
+  
+  .sync-slogan {
+    font-size: clamp(46px, 5.2vw, 68px);
+    line-height: 1.08;
+    letter-spacing: -3px;
+  }
+  
+  .sync-slogan-highlight {
+    background: linear-gradient(100deg, #1b4965 10%, #397da0 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .sync-slogan-line::after {
+    background: linear-gradient(90deg, #1b4965, #65a9ca);
+  }
+  
+  .sync-login-description {
+    color: #617487;
+    font-size: 15px;
+    line-height: 1.9;
+  }
+  
+  .sync-login-benefits {
+    gap: 27px;
+  }
+  
+  .sync-benefit {
+    transition: transform 200ms ease;
+  }
+  
+  .sync-benefit:hover {
+    transform: translateX(4px);
+  }
+  
+  .sync-benefit-number {
+    border-color: rgba(27, 73, 101, 0.13);
+    background: rgba(255, 255, 255, 0.7);
+  }
+  
+  .sync-login-card {
+    position: relative;
+    padding: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.95);
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow:
+      0 25px 70px rgba(22, 56, 77, 0.09),
+      0 4px 14px rgba(22, 56, 77, 0.035);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    transition: box-shadow 220ms ease, transform 220ms ease;
+  }
+  
+  .sync-login-card:hover {
+    box-shadow:
+      0 30px 80px rgba(22, 56, 77, 0.12),
+      0 5px 18px rgba(22, 56, 77, 0.04);
+  }
+  
+  .sync-login-card-heading h2 {
+    font-size: 31px;
+    letter-spacing: -1.1px;
+  }
+  
+  .sync-login-card-heading p {
+    color: #738294;
+  }
+  
+  .sync-login-form {
+    gap: 23px;
+  }
+  
+  .sync-login-field {
+    gap: 10px;
+  }
+  
+  .sync-login-field > label,
+  .sync-password-label-row > label {
+    color: #263d4d;
+    font-size: 12px;
+    letter-spacing: 0.15px;
+  }
+  
+  .sync-login-field > input,
+  .sync-password-wrap > input {
+    height: 51px;
+    padding-left: 15px;
+    border: 1px solid #e0e8ee;
+    border-radius: 11px;
+    background: #fbfcfe;
+    color: #193e54;
+    transition:
+      background 180ms ease,
+      border-color 180ms ease,
+      box-shadow 180ms ease;
+  }
+  
+  .sync-login-field > input:hover,
+  .sync-password-wrap > input:hover {
+    border-color: #b9cbd7;
+  }
+  
+  .sync-login-field > input:focus,
+  .sync-password-wrap > input:focus {
+    border-color: #397da0;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(57, 125, 160, 0.11);
+  }
+  
+  .sync-login-card .sync-password-toggle {
+    border-radius: 6px;
+  }
+  
+  .sync-login-card .sync-password-toggle:focus-visible,
+  .sync-login-card .sync-login-submit:focus-visible,
+  .sync-create-account:focus-visible,
+  .sync-login-page a:focus-visible {
+    outline: 3px solid rgba(57, 125, 160, 0.4);
+    outline-offset: 3px;
+  }
+  
+  .sync-login-card .sync-login-submit {
+    min-height: 52px;
+    border: 0;
+    border-radius: 11px;
+    background: linear-gradient(110deg, #1b4965, #245e7d);
+    box-shadow: 0 7px 17px rgba(27, 73, 101, 0.16);
+    font-size: 14px;
+    letter-spacing: 0.2px;
+    transition:
+      background 200ms ease,
+      transform 200ms ease,
+      box-shadow 200ms ease;
+  }
+  
+  .sync-login-card .sync-login-submit:hover {
+    background: linear-gradient(110deg, #14384f, #1b4965);
+    box-shadow: 0 10px 23px rgba(27, 73, 101, 0.23);
+    transform: translateY(-2px);
+  }
+  
+  .sync-login-card .sync-login-submit:active {
+    transform: translateY(0);
+  }
+  
+  .sync-login-card .sync-login-submit:disabled {
+    cursor: wait;
+    opacity: 0.75;
+    transform: none;
+  }
+  
+  .sync-login-message {
+    border-color: #d5e3ec;
+    border-radius: 10px;
+    background: #f1f7fb;
+  }
+  
+  .sync-login-divider {
+    color: #8795a3;
+    letter-spacing: 1.2px;
+  }
+  
+  .sync-login-divider::before,
+  .sync-login-divider::after {
+    background: #e8edf2;
+  }
+  
+  .sync-create-account {
+    border-color: #e0e8ee;
+    border-radius: 11px;
+    background: #ffffff;
+    transition:
+      background 180ms ease,
+      border-color 180ms ease,
+      transform 180ms ease;
+  }
+  
+  .sync-create-account:hover {
+    border-color: #b4cbd9;
+    background: #f5f9fc;
+    transform: translateY(-1px);
+  }
+  
+  .sync-login-footer {
+    border-top-color: rgba(27, 73, 101, 0.10);
+  }
+  
+  @media (max-width: 900px) {
+    .sync-login-page::before {
+      top: 90px;
+      left: -280px;
+    }
+  
+    .sync-login-card {
+      padding: 34px;
+    }
+  }
+  
+  @media (max-width: 520px) {
+    .sync-login-page::before {
+      width: 250px;
+      height: 250px;
+      top: 100px;
+      left: -190px;
+    }
+  
+    .sync-slogan {
+      font-size: 43px;
+      letter-spacing: -2px;
+    }
+  
+    .sync-login-card {
+      padding: 26px 21px;
+      border-radius: 18px;
+    }
+  
+    .sync-login-card-heading h2 {
+      font-size: 27px;
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .sync-login-page *,
+    .sync-login-page *::before,
+    .sync-login-page *::after {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
+  
